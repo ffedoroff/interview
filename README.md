@@ -4,7 +4,7 @@
 
 http, polling, query
 
-##### Какие виды sql injection вы знаете?
+- Какие виды sql injection вы знаете?
 
 слепые и т.д.
 
@@ -12,7 +12,7 @@ http, polling, query
 
 дата, уровень, модуль
 
-##### Чем git fetch отличается от git pull?
+* Чем git fetch отличается от git pull?
 
 fetch забирает, а pull забирает и мержит
 
