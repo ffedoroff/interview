@@ -125,7 +125,6 @@ observer
 
 индексы + битовая маска
 
-
 #### Интернет реализует семиуровневую модель OSI?
 
 #### TCP/IP реализован на основе OSI? 
@@ -134,4 +133,37 @@ observer
 
 #### Назовите и опишите три нормальных формы в базах данных.
 
+#### С помощью какой структуры данных реализован словарь в python? Какова его алгоритмическая сложность?
 
+HashTable + (B-Tree or OpenAddressing?). 
+
+В лучшем случае HashTable без коллизий, тогда Search/Insertion/Deletion Θ(1). 
+
+Когда HashTable попадает на коллизию, используется (B-Tree or OpenAddressing?), тогда Search/Insertion/Deletion Θ(log(n)).
+
+https://www.bigocheatsheet.com/
+
+#### Напишите декоратор, который логирует название функции, параметры, результат
+
+```
+def log_me(func):
+    def wrapper(*args, **kwargs):
+        value = func(*args, **kwargs)
+        values = [str(a) for a in args]
+        values += [f"{k}={kwargs[k]}" for k in kwargs]
+        values = ', '.join(values)
+        print(f"{func.__name__}({values}) = {value}")
+    return wrapper
+
+
+@log_me
+def foo(a, b, c=2):
+    return a + b + c
+
+
+foo(1, b=2, c=3)
+# output: foo(1, b=2, c=3) = 6
+
+```
+
+#### Реализуйте LinkedList на python
