@@ -92,7 +92,7 @@ def check(a, b, c, n):
     c_set = set(c)
     for i_a in a:
         for i_b in b:
-            if (n - i_a + i_b) in c_set:
+            if (n - i_a - i_b) in c_set:
                 return True
     return False
 
